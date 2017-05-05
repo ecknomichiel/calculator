@@ -1,5 +1,12 @@
 #Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Programmet ska analysera input och utföra calculationerna som användaren har skrivit.
+Använderen ska till exempel mata in sin(2 + pi^5) för att göra en sinusberäkning på (2 + (pi * pi * pi * pi * pi)).
+Det finns en calculatorklass Calculator där input ska tolkas av methoden double Calculator.ParseFormula(string input). 
+Om input är ogiltig ska en exception kastas som beskriver vad felet är.
+Alla calculationer är tillgängliga som en subklass av AbstractCalculation och registreras med CalculationFactory.
+Man får en viss calculation, till exempel en addition, genom att be om den fran CalculationFactory.Instance.CreateCalculation(string nyckel), 
+där nyckel är calculationens operator. För en addition blir det alltså CalculationFactory.Instance.CreateCalculation("+").
+Calculationer har en method, double Calc(double[] factors) som ger calculationens resultat på arrayn.
 
 #Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
